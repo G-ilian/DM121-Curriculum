@@ -6,33 +6,95 @@
     height: 100%;
     padding: 10px; 
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.profile-infos{
 
+.left-menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;  
+}
+.profile-about{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: center
+}
+.profile-photo{
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f0f0f0;
+}
+.profile-photo img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    height: 100%; /* Faz com que a imagem ocupe toda a altura do contêiner */
+    object-fit: cover; /* Garante que a imagem cobre o contêiner sem distorção */
 }
 .profile-name{
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    margin: 0px;
 }
 .profile-job{
     font-size: 15px;
+    margin: 0px;
     font-family: 'Courier New', Courier, monospace;
 }
 .icons{
+    margin: 0px;
     width: 30px;
     height: 30px;
 }
-.profile-about{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    width: 80%;
+    gap: 10px;
 }
 
-.profile-langs{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    width: 100%;
+.profile-item {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
 }
 
+.profile-key {
+    background-color: #FFA500; 
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px; 
+}
+
+.profile-value {
+    flex: 1;
+    text-align: right;
+    padding-left: 10px;
+}
+  
+.profile-info p {
+    margin-bottom: 5px;
+}
+
+.profile-langs ,.profile-skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+
+}
 .progress-container{
     margin-bottom: 10px;
     margin-top: 5px;
@@ -59,7 +121,7 @@
     transition: width 0.3s;
 }
 .download-button{
-    background-color: #e2f364;
+    background-color: #FFB400;
     border-radius: 5px;
     margin: 10% auto;
     width: 80%;
@@ -68,7 +130,7 @@
     display: block
 }
 .download-button:hover{
-    background-color: #FFB400;
+    background-color: #cc9516d2;
 }
 .download-text{
     font-family: 'Courier New', Courier, monospace;
@@ -82,6 +144,17 @@ html, body {
     padding: 0;
     height: 100%;
   }
+.divider{
+    width: 80%;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+.description-text{
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    margin: 0px
+}
 /* Main Menu */
 .main-menu{
     background-color: #E4E6EB;
@@ -124,11 +197,15 @@ html, body {
 .header-profile{
     width: 300px;
     height: 300px;
-    border-radius: 50%;
     background-color: #FFB400;
     margin: 0 auto;
     display: flex;
     align-items: center;
+}
+.header-profile img {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    height: 100%; /* Faz com que a imagem ocupe toda a altura do contêiner */
+    object-fit: cover; /* Garante que a imagem cobre o contêiner sem distorção */
 }
 .header-button{
     background-color: #FFB400;
@@ -141,48 +218,79 @@ html, body {
     text-transform: uppercase;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.middle-item-title{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 35px;
+}
+.middle-item-text{
+    font-size: 15px;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80%;
+}
 .header-button:hover {
     color: white;
 }
 
 /* Projects */
-.projects {
-    display: flex;
-    justify-content: center; /* Centraliza os projetos no container */
-    padding: 20px;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    width: 90%;
 }
 
-.projects-column {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 600px; 
-}
-
-.square-project {
-    width: 180px;
-    height: 180px; 
-    background-color: #e0e0e0;
-    margin: 10px;
+.item-container {
+    width: 100%;
+    height: 400px; 
+    max-width: 300px;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.item-img{
+    border: #000 1px solid;
+    width: 80%;
+    height: 200px;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.item-description{
+    width: 100%;
+    word-wrap: break-word; /* Garante que o texto longo quebre a linha */
+    overflow-wrap: break-word; /* Garante que o texto longo quebre a linha */
 }
 
-.square-project-image{
-
+.item-description h3{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
 }
-
-.square-project-text{
-
+.item-description p{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
 }
 /* Education */
 .middle-item{
-    padding: 20px;
-    text-align: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    width: 100%; 
+    padding: 5px; 
+    box-sizing: border-box; 
 }
 /* Double column */
 .double-column{
@@ -196,11 +304,9 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 1000px; 
-    width: 100%;
+    width: 85%;
     padding: 20px;
-    border-radius: 10px; 
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; 
 }
 .item-content{
     flex: 1;
@@ -220,27 +326,20 @@ html, body {
 /*Forms*/
 .double-column-contact{
     display: flex;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
+    width: 85%;
     box-sizing: border-box; 
-    justify-content: space-between;
-    gap:10px
+    gap:10px;
 }
 .form-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
-    max-width: 900px;
     background-color: #fff;
-    margin-right: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
 }
 .contact-form {
     width: 100%;
-    align-content: flex-start;
     padding: 15px;
 }
 
