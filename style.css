@@ -17,7 +17,7 @@
     font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
 }
-.icons-social{
+.icons{
     width: 30px;
     height: 30px;
 }
@@ -77,5 +77,50 @@
     color: #000;    
 }
 /* Main Menu */
-
+.main-menu{
+    background-color: #042c93;
+    border: #000 solid;
+}
 /* Right Menu */
+.right-menu{
+    background-color: #ffffff;
+    width: 5%;
+    height: 100%;
+    padding: 10px; 
+    border-radius: 5px; 
+    position: fixed;
+    right: 0;
+    top: 0;
+    box-shadow: #000;
+
+}
+.top-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 25px auto;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    padding-top: 10px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.top-icon svg {
+    display: block;
+}
+.rigth-menu-icon{
+    width: 60px;
+    height: 60px;
+    background-color: #a8a6a29c;
+    border-radius: 50%;
+    margin: 25px auto;
+    align-items: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+
+}
+.rigth-menu-icon:hover{
+    background-color: #FFB400;
+}
